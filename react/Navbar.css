@@ -1,0 +1,55 @@
+/* Navbar.css */
+.navbar {
+  background-color: #0a59a8;
+  background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1000');
+  background-size: cover;
+  background-position: center;
+  padding: 1rem 2rem;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(13, 11, 11, 0.037);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  background-color: rgba(11, 0, 0, 0.023);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.nav-links a {
+  color: rgba(237, 133, 14, 0.899);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
