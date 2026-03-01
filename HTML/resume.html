@@ -1,0 +1,80 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUJANI A | Learner </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="suji.jpg" alt="SUJANI A">
+            <h1>SUJANI A</h1>
+            <p class="role">Learner</p>
+            <p class="location"> Nedarapeta , Andhra Pradesh, India</p>
+            <p class-"contact">avulasujani40@gmail.com | +91 6281298519</p>
+        </div>
+    </header>
+<nav class="navbar"></nav>
+<div class="nav-container">
+    <div class="nav-logo">SUJANI A</div>
+    <div class="hamburger" id="hamburger">☰</div>
+    <div class="nav-menu" id="navMenu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+    </div>
+</nav>
+<main class="container">
+    <section id="about" class="card">
+        <h2>Professional Summary</h2>
+        <p>
+            A motivated student with basic programming knowledge in HTML,CSS,JavaScript and Python, 
+            eager to learn new technologies and start a career in software development.
+        </p>
+    </section>
+    <section id="skills" class="card">
+        <h2>Core Skills</h2>
+        <div class="grid">
+            <div>Python</div>
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+        </div>
+    </section>
+   <section id="projects" class="card">
+    <h2>Key Projects</h2>
+    <ul>
+        <li>Hotel Management System</li>
+        <li>Bus Reservation System</li>
+        <li>Personal Portfolio</li>
+    </ul>
+   </section>
+   <section id="contact" class="card">
+    <h2>Contact</h2>
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+   </section>
+</main>
+<footer class="footer">
+    <p>© 2025 SUJANI A | Professional Resume Website</p>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+});
+</script>
+</body>
+</html>
