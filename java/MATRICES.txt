@@ -1,0 +1,129 @@
+MATRICES
+
+1> Write a program to read a matrix and print it.
+
+Input Format
+First line contains two integers R and C (number of rows and columns).
+Next R lines contain C integers each.
+
+Output Format
+Print the matrix elements row-wise.
+
+Inputcopy Outputcopy
+2 3
+1 2 3
+4 5 6
+1 2 3
+4 5 6
+
+---
+
+2> Write a program to find the sum of elements of a matrix.
+
+Input Format
+First line contains R and C.
+Next R lines contain C integers.
+
+Output Format
+Print the sum of all elements.
+
+Inputcopy Outputcopy
+2 2
+1 2
+3 4
+10
+
+---
+
+3> Write a program to find the largest element in a matrix.
+
+Input Format
+First line contains R and C.
+Next R lines contain C integers.
+
+Output Format
+Print the largest element.
+
+Inputcopy Outputcopy
+2 3
+1 9 3
+4 5 6
+9
+
+---
+
+4> Write a program to find the smallest element in a matrix.
+
+Input Format
+First line contains R and C.
+Next R lines contain C integers.
+
+Output Format
+Print the smallest element.
+
+Inputcopy Outputcopy
+2 2
+8 3
+6 1
+1
+
+---
+
+5> Write a program to add two matrices.
+
+Input Format
+First line contains R and C.
+Next R lines contain C elements of first matrix.
+Next R lines contain C elements of second matrix.
+
+Output Format
+Print the resultant matrix.
+
+Inputcopy Outputcopy
+2 2
+1 2
+3 4
+5 6
+7 8
+6 8
+10 12
+
+---
+
+6> Write a program to find the transpose of a matrix.
+
+Input Format
+First line contains R and C.
+Next R lines contain C integers.
+
+Output Format
+Print the transpose of the matrix.
+
+Inputcopy Outputcopy
+2 3
+1 2 3
+4 5 6
+1 4
+2 5
+3 6
+
+---
+
+7> Write a program to multiply two matrices.
+
+Input Format
+First line contains R1 C1 R2 C2.
+Next R1 lines contain C1 elements of first matrix.
+Next R2 lines contain C2 elements of second matrix.
+
+Output Format
+Print the product matrix.
+
+Inputcopy Outputcopy
+2 2 2 2
+1 2
+3 4
+5 6
+7 8
+19 22
+43 50

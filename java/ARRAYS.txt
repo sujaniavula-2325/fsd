@@ -1,0 +1,309 @@
+ARRAYS
+
+1> Write a program to read N elements into an array and print them.
+
+Input Format
+First line contains N – size of the array.
+Second line contains N integers.
+
+Output Format
+Print all array elements in the same order.
+
+Inputcopy
+5
+1 2 3 4 5
+
+Outputcopy
+1 2 3 4 5
+
+SOLUTION:
+import java.util.*;
+class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int[] a=new int[n];
+for(int i=0;i<n;i++){
+a[i]=sc.nextInt();
+}
+for(int i=0;i<n;i++){
+System.out.print(a[i]+" ");
+}
+}
+}
+
+---
+
+2> Write a program to find the sum of elements in an array.
+
+Input Format
+First line contains N.
+Second line contains N integers.
+
+Output Format
+Print the sum of array elements.
+
+Inputcopy
+4
+10 20 30 40
+
+Outputcopy
+100
+
+SOLUTION:
+import java.util.*;
+class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int[] a=new int[n];
+int sum=0;
+for(int i=0;i<n;i++){
+a[i]=sc.nextInt();
+sum=sum+a[i];
+}
+System.out.println(sum);
+}
+}
+
+---
+
+3> Write a program to find the largest element in an array.
+
+Inputcopy
+5
+2 8 1 6 4
+
+Outputcopy
+8
+
+SOLUTION:
+import java.util.*;
+class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int[] a=new int[n];
+for(int i=0;i<n;i++){
+a[i]=sc.nextInt();
+}
+int max=a[0];
+for(int i=1;i<n;i++){
+if(a[i]>max){
+max=a[i];
+}
+}
+System.out.println(max);
+}
+}
+
+---
+
+4> Write a program to find the smallest element in an array.
+
+Inputcopy
+5
+7 3 9 1 6
+
+Outputcopy
+1
+
+SOLUTION:
+import java.util.*;
+class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int[] a=new int[n];
+for(int i=0;i<n;i++){
+a[i]=sc.nextInt();
+}
+int min=a[0];
+for(int i=1;i<n;i++){
+if(a[i]<min){
+min=a[i];
+}
+}
+System.out.println(min);
+}
+}
+
+---
+
+5> Write a program to count even numbers in an array.
+
+Inputcopy
+6
+1 2 3 4 6 7
+
+Outputcopy
+3
+
+SOLUTION:
+import java.util.*;
+class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int[] a=new int[n];
+int count=0;
+for(int i=0;i<n;i++){
+a[i]=sc.nextInt();
+if(a[i]%2==0){
+count++;
+}
+}
+System.out.println(count);
+}
+}
+
+---
+
+6> Write a program to reverse an array.
+
+Inputcopy
+4
+5 10 15 20
+
+Outputcopy
+20 15 10 5
+
+SOLUTION:
+import java.util.*;
+class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int[] a=new int[n];
+for(int i=0;i<n;i++){
+a[i]=sc.nextInt();
+}
+for(int i=n-1;i>=0;i--){
+System.out.print(a[i]+" ");
+}
+}
+}
+
+---
+
+7> Write a program to check whether a number exists in an array.
+
+Inputcopy
+5
+3 6 9 2 7
+6
+
+Outputcopy
+YES
+
+SOLUTION:
+import java.util.*;
+class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int[] a=new int[n];
+for(int i=0;i<n;i++){
+a[i]=sc.nextInt();
+}
+int key=sc.nextInt();
+boolean found=false;
+for(int i=0;i<n;i++){
+if(a[i]==key){
+found=true;
+break;
+}
+}
+if(found){
+System.out.println("YES");
+}else{
+System.out.println("NO");
+}
+}
+}
+
+---
+
+8> Write a program to copy elements from one array to another.
+
+Inputcopy
+3
+4 8 12
+
+Outputcopy
+4 8 12
+
+SOLUTION:
+import java.util.*;
+class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int[] a=new int[n];
+int[] b=new int[n];
+for(int i=0;i<n;i++){
+a[i]=sc.nextInt();
+b[i]=a[i];
+}
+for(int i=0;i<n;i++){
+System.out.print(b[i]+" ");
+}
+}
+}
+
+---
+
+9> Write a program to count positive numbers in an array.
+
+Inputcopy
+6
+-2 5 -1 7 3 -4
+
+Outputcopy
+3
+
+SOLUTION:
+import java.util.*;
+class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int[] a=new int[n];
+int count=0;
+for(int i=0;i<n;i++){
+a[i]=sc.nextInt();
+if(a[i]>0){
+count++;
+}
+}
+System.out.println(count);
+}
+}
+
+---
+
+10> Write a program to find the average of array elements.
+
+Inputcopy
+4
+2 4 6 8
+
+Outputcopy
+5.0
+
+SOLUTION:
+import java.util.*;
+class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int[] a=new int[n];
+int sum=0;
+for(int i=0;i<n;i++){
+a[i]=sc.nextInt();
+sum=sum+a[i];
+}
+double avg=(double)sum/n;
+System.out.println(avg);
+}
+} codes give mee structure and line by line 

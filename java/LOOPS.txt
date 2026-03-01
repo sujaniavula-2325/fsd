@@ -1,0 +1,450 @@
+LOOPS
+
+A> Water Consumption
+
+Recently, Chef visited his doctor. The doctor advised Chef to drink at least 2000 ml of water each day.
+
+Chef drank X ml of water today. Determine if Chef followed the doctor’s advice or not.
+
+Input Format
+The first line contains a single integer T — the number of test cases.
+The first and only line of each test case contains one integer X.
+
+Output Format
+For each test case, output YES if Chef followed the doctor’s advice. Otherwise, output NO.
+
+Inputcopy Outputcopy
+3
+2999
+1450
+2000
+YES
+NO
+YES
+
+SOLUTION:
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int T=sc.nextInt();
+for(int i=0;i<T;i++){
+int X=sc.nextInt();
+if(X>=2000)
+System.out.println("YES");
+else
+System.out.println("NO");
+}
+}
+}
+
+B> Non-Negative Product
+
+Alice has an array of N integers. She wants the product of all elements to be non-negative.
+
+Input Format
+First line contains T.
+For each test case:
+First line contains N.
+Second line contains N integers.
+
+Output Format
+Print minimum number of elements to remove.
+
+Inputcopy Outputcopy
+4
+3
+1 9 8
+4
+2 -1 9 100
+4
+2 -1 0 100
+4
+2 -1 -1 100
+0
+1
+0
+0
+
+SOLUTION:
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int T=sc.nextInt();
+while(T-->0){
+int N=sc.nextInt();
+int neg=0;
+boolean zero=false;
+for(int i=0;i<N;i++){
+int x=sc.nextInt();
+if(x<0) neg++;
+if(x==0) zero=true;
+}
+if(zero || neg%2==0)
+System.out.println(0);
+else
+System.out.println(1);
+}
+}
+}
+
+C> I Can Use Both Hands!
+
+Chef writes pages and code simultaneously.
+
+Input Format
+First line contains T.
+Each test case contains L R M.
+
+Output Format
+Print Chef’s satisfaction.
+
+Inputcopy Outputcopy
+4
+2 4 8
+3 4 6
+4 3 6
+10 12 5
+6
+3
+4
+1
+
+SOLUTION:
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int T=sc.nextInt();
+while(T-->0){
+int L=sc.nextInt();
+int R=sc.nextInt();
+int M=sc.nextInt();
+int pages=(M+L-1)/L;
+int lines=M/R;
+System.out.println(pages+lines);
+}
+}
+}
+
+D> Chef and Stocks
+
+Chef skips exactly one day to maximize profit.
+
+Input Format
+First line contains T.
+For each test case:
+First line contains N.
+Second line contains N integers.
+
+Output Format
+Print maximum profit.
+
+Inputcopy Outputcopy
+4
+3
+1 -2 3
+4
+4 1 5 1
+4
+10 -10 -10 10
+5
+-5 -4 -3 -2 -1
+4
+10
+10
+-10
+
+SOLUTION:
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int T=sc.nextInt();
+while(T-->0){
+int N=sc.nextInt();
+int sum=0;
+int min=Integer.MAX_VALUE;
+for(int i=0;i<N;i++){
+int x=sc.nextInt();
+sum+=x;
+if(x<min) min=x;
+}
+System.out.println(sum-min);
+}
+}
+}
+
+E> Rearranging Digits to Get a Multiple of 5
+
+Input Format
+First line contains T.
+Each test case contains D and string N.
+
+Output Format
+Print Yes or No.
+
+Inputcopy Outputcopy
+3
+3
+115
+3
+103
+3
+119
+Yes
+Yes
+No
+
+SOLUTION:
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int T=sc.nextInt();
+while(T-->0){
+int D=sc.nextInt();
+String N=sc.next();
+boolean ok=false;
+for(int i=0;i<D;i++){
+char c=N.charAt(i);
+if(c=='0'||c=='5'){
+ok=true;
+break;
+}
+}
+System.out.println(ok?"Yes":"No");
+}
+}
+}
+
+F> The Old Saint And Three Questions
+
+Input Format
+First line contains T.
+Next two lines contain three integers each.
+
+Output Format
+Print Pass or Fail.
+
+Inputcopy Outputcopy
+2
+1 0 1
+1 1 0
+0 0 0
+1 1 1
+Pass
+Fail
+
+SOLUTION:
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int T=sc.nextInt();
+while(T-->0){
+int yes1=0,yes2=0;
+for(int i=0;i<3;i++) if(sc.nextInt()==1) yes1++;
+for(int i=0;i<3;i++) if(sc.nextInt()==1) yes2++;
+System.out.println(yes1==yes2?"Pass":"Fail");
+}
+}
+}
+
+U> Card Game
+
+Input
+First line contains n.
+Next n lines contain two strings.
+
+Output
+Print final scores.
+
+Inputcopy Outputcopy
+3
+cat dog
+fish fish
+lion tiger
+1 7
+
+SOLUTION:
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int taro=0,hanako=0;
+for(int i=0;i<n;i++){
+String a=sc.next();
+String b=sc.next();
+int cmp=a.compareTo(b);
+if(cmp>0) taro+=3;
+else if(cmp<0) hanako+=3;
+else{ taro++; hanako++; }
+}
+System.out.println(taro+" "+hanako);
+}
+}
+
+V> Triangle
+
+Input
+a b C
+
+Output
+S
+L
+h
+
+Inputcopy Outputcopy
+4 3 90
+6.00000000
+12.00000000
+3.00000000
+
+SOLUTION:
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int a=sc.nextInt();
+int b=sc.nextInt();
+int C=sc.nextInt();
+double rad=Math.toRadians(C);
+double S=0.5abMath.sin(rad);
+double c=Math.sqrt(aa+bb-2abMath.cos(rad));
+double L=a+b+c;
+double h=(2*S)/a;
+System.out.println(S);
+System.out.println(L);
+System.out.println(h);
+}
+}
+
+W> Standard Deviation
+
+Input
+Multiple datasets until n=0.
+
+Output
+Print standard deviation.
+
+Inputcopy Outputcopy
+5
+70 80 100 90 20
+3
+80 80 80
+0
+27.85677655
+0.00000000
+
+SOLUTION:
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+while(true){
+int n=sc.nextInt();
+if(n==0) break;
+double[] a=new double[n];
+double sum=0;
+for(int i=0;i<n;i++){
+a[i]=sc.nextDouble();
+sum+=a[i];
+}
+double mean=sum/n;
+double var=0;
+for(int i=0;i<n;i++){
+double d=a[i]-mean;
+var+=d*d;
+}
+var/=n;
+System.out.printf("%.8f%n",Math.sqrt(var));
+}
+}
+}
+X> Official House
+
+You manage 4 buildings, each of which has 3 floors, and each floor has 10 rooms.
+Initially, no one lives in the buildings.
+
+You are given a sequence of tenant/leaver notices.
+Each notice contains four integers b, f, r and v:
+
+b = building number
+
+f = floor number
+
+r = room number
+
+v = number of people entered (if v is negative, people left)
+
+Update the number of tenants accordingly and print the final state.
+
+Input
+In the first line, the number of notices n is given.
+In the following n lines, each line contains four integers b, f, r and v.
+
+Output
+For each building, print the information of the 1st, 2nd and 3rd floor in this order.
+For each floor, print the number of tenants in rooms 1 to 10.
+Print a single space before each number.
+Print
+####################
+between buildings.
+
+Constraints
+No incorrect building, floor or room numbers are given.
+0 ≤ number of tenants ≤ 9.
+
+Inputcopy Outputcopy
+3
+1 1 3 8
+3 2 2 7
+4 3 8 1
+
+0 0 8 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+####################
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+####################
+0 0 0 0 0 0 0 0 0 0
+0 7 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+####################
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 1 0 0
+
+SOLUTION:
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int[][][] a=new int[4][3][10];
+int n=sc.nextInt();
+
+for(int i=0;i<n;i++){
+int b=sc.nextInt()-1;
+int f=sc.nextInt()-1;
+int r=sc.nextInt()-1;
+int v=sc.nextInt();
+a[b][f][r]+=v;
+}
+
+for(int b=0;b<4;b++){
+for(int f=0;f<3;f++){
+for(int r=0;r<10;r++){
+System.out.print(" "+a[b][f][r]);
+}
+System.out.println();
+}
+if(b!=3)
+System.out.println("####################");
+}
+}
+}
